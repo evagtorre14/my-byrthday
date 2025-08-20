@@ -1,0 +1,72 @@
+---
+// Aquí irá la lógica para manejar el envío del formulario
+---
+
+<section id="rsvp" class="py-20 px-8 bg-secondary/10">
+  <div class="max-w-lg mx-auto text-center bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg">
+    <h2 class="text-4xl font-headings font-bold text-secondary mb-2">
+      ¿Contamos contigo?
+    </h2>
+    <p class="text-lg text-text-primary mb-10">
+      Confirma tu asistencia, por favor.
+    </p>
+
+    <form method="POST" action="https://formspree.io/f/mgvzjroq" class="text-left space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-bold text-text-primary mb-2">Nombre</label>
+        <input 
+          type="text" 
+          id="name" 
+          name="Nombre" 
+          class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-text-primary focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+          placeholder="Tu nombre..."
+          required
+        />
+      </div>
+
+      <div>
+        <label for="station" class="block text-sm font-bold text-text-primary mb-2">Estación de metro elegida</label>
+        <input 
+          type="text" 
+          id="station" 
+          name="Estacion" 
+          class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-text-primary focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+          placeholder="Ej: Sol, Tribunal, Atocha..."
+          required
+        />
+        <p class="text-xs text-gray-600 mt-2">Nota: además del disfraz, deberás llevar el nombre de la estación en algún lugar visible</p>
+      </div>
+
+      <fieldset>
+        <legend class="block text-sm font-bold text-text-primary mb-3">¿Asistirás?</legend>
+        <div class="flex items-center gap-6">
+          <label class="flex items-center p-3 border rounded-lg w-full cursor-pointer hover:border-primary">
+            <input type="radio" name="Asistencia" value="Si" class="h-5 w-5 text-primary focus:ring-primary border-gray-300" required>
+            <span class="ml-3 text-text-primary">¡Sí, allí estaré! ☀️</span>
+          </label>
+          <label class="flex items-center p-3 border rounded-lg w-full cursor-pointer hover:border-primary">
+            <input type="radio" name="Asistencia" value="No" class="h-5 w-5 text-gray-400 focus:ring-gray-400 border-gray-300">
+            <span class="ml-3 text-text-primary">No podré 😔</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div>
+        <label for="comment" class="block text-sm font-bold text-text-primary mb-2">Comentario (opcional)</label>
+        <textarea
+          id="comment"
+          name="Comentario"
+          rows="4"
+          class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-text-primary focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
+          placeholder="Alergias, sugerencias, o simplemente un saludo..."
+        ></textarea>
+      </div>
+
+      <div>
+        <button type="submit" class="w-full mt-4 bg-primary text-white font-bold text-lg py-3 px-6 rounded-lg shadow-md hover:bg-opacity-90 transform hover:-translate-y-0.5 transition-all duration-300">
+          Enviar Confirmación
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
