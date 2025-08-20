@@ -7,5 +7,5 @@ export default defineConfig({
   // ¡IMPORTANTE!
   // Actualiza estos valores con tu usuario y el nombre de tu repositorio de GitHub
   site: 'https://eva.gtorre.github.io',
-  base: '/my-birthday',
+  base: '/MyBirthday',
 });
